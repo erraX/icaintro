@@ -1,0 +1,31 @@
+{
+  "name": "icaintro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erraX/icaintro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erraX/icaintro/issues"
+  },
+  "homepage": "https://github.com/erraX/icaintro",
+  "dependencies": {
+    "css-loader": "^0.22.0",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.1.19",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.18"
+  }
+}
