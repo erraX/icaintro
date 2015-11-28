@@ -98,6 +98,7 @@ aside {
       &:hover {
         background-color: $main-color;
         color: #fff;
+        text-indent: 10px;
         cursor: pointer;
       }
 
@@ -110,12 +111,14 @@ aside {
 
   .desc-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     width: 100%;
+    background-color: hsl(0, 0%, 29%);
+    padding: 30px 0;
   }
 
   .desc {
-    color: #FFFFFF;
+    color: #818181;
     font-size: 14px;
     text-align: center;
     font-weight: 500
