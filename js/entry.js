@@ -1,5 +1,6 @@
 import '../css/layout.scss';
 
 $(() => {
-    console.log('start');
+    particlesJS.load('particles', 'config/particles.json', () => {
+    });
 });
