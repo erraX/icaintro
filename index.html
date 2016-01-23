@@ -9,18 +9,17 @@
 </head>
 <body>
   <!-- <div id="top&#45;fixed"></div> -->
-  <aside>
+  <aside id="aside-nav">
     <a class="home" href="">
       <h1 class="logo">ICA</h1>
       <p class="desc"></p>
     </a>
 
     <ul class="nav nav-child">
-      <li class="active">实验室简介</li>
-      <li>师生简介</li>
-      <li>发表论文</li>
-      <li>研究成果</li>
-      <li>关于我们</li>
+      <a href="#intro"><li class="active">实验室简介</li></a>
+      <a href="#people"><li>师生简介</li></a>
+      <a href="#research"><li>研究成果</li></a>
+      <!-- <a href="#about"><li>关于我们</li></a> -->
     </ul>
 
     <div class="desc-container">
@@ -38,7 +37,7 @@
       </p>
     </div>
   </aside>
-  <div class="content" data-tab="lab-intro">
+  <div class="content active">
     <h1>小i机器人智能大数据联合实验室</h1>    
     <p>
       小i机器人与华东师范大学计算机应用研究所合作成立了智能大数据分析与挖掘联合实验室。联合实验室将基于双方现有的研究积累和产业应用，在大数据领域开展产学合作，重点聚焦在自然语言处理、知识库建设、趋势预测、用户行为分析与推荐等方面，提高小i机器人服务各行各业的智能化程度，建立以市场为导向，以企业为主体的科技创新体系，加速科研成果的市场转化，提升双方的核心技术创新能力。
@@ -66,37 +65,128 @@
       1)  语义知识理解
     </p>
     <p>此研究方向可以细分为自然语言处理和知识库构建两个方向，共五个研究内容。</p>
-    <p class="desc">文本情感分析</p>
+    <p class="block">文本情感分析</p>
     <p> 文本情感分析又称意见挖掘,是对带有情感色彩的主观性文本进行分析、处理、归纳和推理的过程。情感分析对于各类智能机器人及客服系统具有特殊的意义，因为它可以作为获得用户满意度的有效手段，可以捕获客户态度，帮助客服中心改善效率，实现客户保留率的提高。</p>
-    <p class="desc">文本的自动摘要</p>
+    <p class="block">文本的自动摘要</p>
     <p>所谓自动摘要就是利用计算机自动地从原始文献中提取文摘，文摘指的是可以准确全面地反映某一文献中心内容的简洁连贯的短文。对海量数据的语义理解过程中，文本自动摘要技术可以发挥重要作用，并可应用在知识库的自动构建过程中。</p>
-    <p class="desc">基于海量语料库的自然语言理解算法的优化</p>
+    <p class="block">基于海量语料库的自然语言理解算法的优化</p>
     <p>自然语言处理算法例如分词、词性标注、新词发现、命名实体识别、句法分析等都依赖于语料集，一个高质量的语料集直接影响处理的准确率。联合实验室将对某些自然语言处理算法进行两点优化：生成大规模高质量的语料集；算法的并行化改进。</p>
-    <p class="desc">基于上下文的语义消岐</p>
+    <p class="block">基于上下文的语义消岐</p>
     <p>中文自然语言中普遍存在着“一名指多物，一物用多名”的现象，例如人名中普遍存在着正式名、简化名和号等，各种机构名也存在着多名现象，例如机构名全称和简称，这就给智能语义机器人提供准确服务带来了很大的困难和挑战。联合实验室还将提出一种基于上下文的语义消岐方法，把语义网络和多元统计信息融合进语义相识度计算，实现语义消岐。</p>
-    <p class="desc">知识库自动构建</p>
+    <p class="block">知识库自动构建</p>
     <p>主要研究小i机器人所需知识库的全自动构建，把海量异构数据通过数据的清洗和消歧整理成知识，并融入到已有的知识体系中来，提高跨领域知识的应用和复用。</p>
     <p class="sub">
       2)  数据挖掘
     </p>
     <p>本研究方向可细分为智能信息推荐和用户模型构建两个方向，共三个研究内容。</p>
-    <p class="desc">疑难问题的推荐</p>
+    <p class="block">疑难问题的推荐</p>
     <p>目前小i机器人每天的交互次数超过五千万次，有一定数量的问题小i是无法回答的，这种问题小i一般会提示“小i还在成长中”。联合实验室成立之后，会对Hadoop平台上机器人交互日志的数据进行分析和挖掘实，让小i机器人可以在短时间内实现自我的提升，不论对领域内的行业服务机器人，还是互联网的大众机器人，都可以取得理想效果，体现小i具有充分的自我学习能力。</p>
-    <p class="desc">热点问题的推荐</p>
+    <p class="block">热点问题的推荐</p>
     <p>小i回答的大量问题中，有些问题被很多人问到，属于“热点问题”。对这些热点问题，如何知道回答的质量？用户满意度如何？小i的回答有没有改进的空间？借助大数据平台，通过语义情感分析和智能推荐技术，可以解决这个问题。</p>
-    <p class="desc">用户模型构建</p>
+    <p class="block">用户模型构建</p>
     <p>在分析用户的属性、兴趣偏好、行为特征等信息的基础上，通过对机器人聊天日志的深度分析，并通过领域知识构建和社会需求发现，建立用户的兴趣模型。提供符合用户特征的信息推荐，探讨新的商业模式。</p>
     <p class="sub">
       3)  大数据存储与检索
     </p>
     <p>本研究方向主要研究海量数据的存储和实时检索，包括垂直搜索爬虫、数据存储、搜索引擎三个研究内容。本方向的研究成果不但可以服务于小i机器人，还可以作为大数据领域的通用搜索引擎解决方案。</p>
-    <p class="desc">垂直语义爬虫</p>
+    <p class="block">垂直语义爬虫</p>
     <p>小i机器人需要爬取大量的web网页作为知识库的素材，与百度、Google这些搜索引擎公司不同，小i机器人优先爬取特定领域内具有特定语义的资源，这就是垂直语义爬虫的概念。联合实验室将对爬虫项目进行二次开发，构建垂直语义爬虫。</p>
-    <p class="desc">数据存储</p>
+    <p class="block">数据存储</p>
     <p>前文所述的研究工作会生成大量的数据，例如海量的网页和知识库，这些海量的数据可以达到100亿条的规模，因此需要一种满足海量数据下仍能进行实时读写的数据存储系统。</p>
-    <p class="desc">大数据检索</p>
+    <p class="block">大数据检索</p>
     <p>为了支持对各类中间数据、知识数据的实时检索，还需要开发一种分布式、支持多种数据源、满足实时搜索需要的搜索引擎。</p>
     <p>以上研究内容，从技术层次上可以划分为三层：基础研究层、数据展现层和应用层。2013年，主要在大数据平台构建、日志统计分析、疑难问题推荐和关键词提取等领域开展工作。</p>
+  </div>
+  <div class="content">
+    <h1>师生简介</h1>    
+    <h4>2014级</h4>
+    <div class="card-container">
+      <div class="card">
+        <img src="/img/steve.jpg" alt="">
+        <div class="card-content">
+          <span class="name">张巍骞</span>
+          <span class="name">研究方向：自然语言处理</span>
+        </div>
+        <div class="extra-card-content"></div>
+      </div>
+      <div class="card">
+        <img src="/img/steve.jpg" alt="">
+        <div class="card-content">
+          <span class="name">马敬超</span>
+          <span class="name">研究方向：自然语言处理</span>
+        </div>
+        <div class="extra-card-content"></div>
+      </div>
+    </div>
+    <h4>2013级</h4>
+    <div class="card-container">
+      <div class="card">
+        <img src="/img/steve.jpg" alt="">
+        <div class="card-content">
+          <span class="name">倪敏杰</span>
+          <span class="name">研究方向：本体</span>
+        </div>
+        <div class="extra-card-content"></div>
+      </div>
+      <div class="card">
+        <img src="/img/steve.jpg" alt="">
+        <div class="card-content">
+          <span class="name">杨辰翌</span>
+          <span class="name">研究方向：机器学习</span>
+        </div>
+        <div class="extra card-content"></div>
+      </div>
+      <div class="card">
+        <img src="/img/steve.jpg" alt="">
+        <div class="card-content">
+          <span class="name">黄保荃</span>
+          <span class="name">研究方向：网络爬虫</span>
+        </div>
+        <div class="extra-card-content"></div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img src="/img/steve.jpg" alt="">
+        <div class="card-content">
+          <span class="name">杜泽宇</span>
+          <span class="name">研究方向：机器学习</span>
+        </div>
+        <div class="extra card-content"></div>
+      </div>
+      <div class="card">
+        <img src="/img/steve.jpg" alt="">
+        <div class="card-content">
+          <span class="name">罗念</span>
+          <span class="name">研究方向：机器学习</span>
+        </div>
+        <div class="extra card-content"></div>
+      </div>
+    </div>
+    <h4>2012级</h4>
+    <div class="card-container">
+      <div class="card">
+        <img src="/img/steve.jpg" alt="">
+        <div class="card-content">
+          <span class="name">陈国梁</span>
+          <span class="name">研究方向：自然语言处理</span>
+        </div>
+        <div class="extra-card-content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h1>研究成果</h1>    
+    <div class="research-container">
+      <p class="title"><a href="http://www.baidu.com" target="_blank">Prognoos</a></p>
+      <p class="author">倪敏杰</p>
+      <div class="intro">
+          <p> We design and implement a relation prediction system. This system could predict relation between two entities and make rule inference. In the backend, template engine we designed can convert rules to SPARQL.  </p>
+          <div class="screenshot">
+            <a href="http://www.baidu.com" target="_blank"><img src="/img/linkprediction.png" alt=""></a>
+          </div>
+      </div>
+    </div>
   </div>
   <div id="particles"></div>
 </body>

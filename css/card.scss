@@ -1,0 +1,34 @@
+.card-container {
+  display: -webkit-flex;
+  -webkit-flex-flow: row;
+  margin-bottom: 50px;
+}
+
+.card {
+  width: 180px;
+  min-height: 0;
+  max-width: 100%;
+  background: #FFF;
+  margin-right: 100px;
+  padding: 0;
+  border: none;
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 3px 0 #D4D4D5,0 0 0 1px #D4D4D5;
+
+  img {
+    width: 100%;
+  }
+}
+
+.card-content {
+  padding: 5px 10px;
+
+  .name {
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+  }
+
+  &.extra {
+  }
+}

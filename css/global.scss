@@ -1,0 +1,56 @@
+@mixin hover-color($color) {
+    &:active,
+    &:focus {
+      color: $color;
+      cursor: pointer;
+    }
+}
+
+@mixin hover-color-bg($color, $bg-color) {
+    &:active,
+    &:focus {
+      color: $color;
+      background-color: $bg-color;
+      cursor: pointer;
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  padding: 0 30px 0 270px;
+  border-top: 5px solid $main-color;
+  font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
+  background-color: #fff;
+  @include hover-color-bg(#fff, #fff);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#top-fixed {
+  position: fixed;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: $main-color;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 262px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}

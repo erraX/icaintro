@@ -1,0 +1,36 @@
+.content {
+  width: 1200px;
+  color: #666;
+  display: none;
+
+  h1 {
+    color: $sec-color;
+    margin: 46px 0 20px 0;
+    font-size: 35px;
+  }
+
+  h4 {
+    font-weight: 500;
+    margin: 10px 0;
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 16px;
+    text-indent: 2em;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+
+  .block {
+    border-left: 4px solid #ddd;
+    padding: 0 15px;
+    color: #777;
+    text-indent: 0;
+    margin-left: 2em;
+  }
+
+  &.active {
+    display: block;
+  }
+}
