@@ -48,8 +48,15 @@
 
 	__webpack_require__(1);
 
+	var _controller = __webpack_require__(5);
+
+	var _controller2 = _interopRequireDefault(_controller);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	$(function () {
-	    console.log('start');
+	    particlesJS.load('particles', 'config/particles.json');
+	    var controller = new _controller2.default();
 	});
 
 /***/ },
@@ -68,8 +75,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./layout.scss", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./layout.scss");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -87,7 +94,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  color: yellow; }\n", ""]);
+	exports.push([module.id, "/* $main-color: #446f9f; */\n/* $sec-color: #2080B8; */\n* {\n  margin: 0;\n  padding: 0; }\n\nbody {\n  color: black;\n  padding: 0 30px 0 270px;\n  border-top: 5px solid #ffa773;\n  font-family: \"Avenir Next\", Helvetica, Arial, \"Lantinghei SC\", \"Microsoft YaHei\", sans-serif;\n  background-color: #fff; }\n  body:active, body:focus {\n    color: #fff;\n    background-color: #fff;\n    cursor: pointer; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n\n#top-fixed {\n  position: fixed;\n  top: 0;\n  display: inline-block;\n  width: 100%;\n  height: 5px;\n  background-color: #ffa773; }\n\n#particles {\n  position: fixed;\n  top: 0;\n  left: 262px;\n  z-index: -1;\n  width: 100%;\n  height: 100%; }\n\n#aside-nav {\n  transform: translateZ(0);\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 240px;\n  box-shadow: 0px 0px 44px 5px rgba(98, 98, 98, 0.86);\n  background: #565656;\n  z-index: 999; }\n\n.logo {\n  font-size: 90px;\n  font-weight: 900;\n  text-align: center;\n  margin: 30px 0;\n  color: #ffa773; }\n  .logo:active, .logo:focus {\n    color: #ffa773; }\n\n.nav {\n  line-height: 40px;\n  width: 100%;\n  /* margin: 0 10px; */\n  font-weight: 500;\n  display: inline-block;\n  text-align: center;\n  color: #ffa773;\n  transition: 0.3s all; }\n\n.nav-parent {\n  background-color: #ffa773;\n  color: #ffa773; }\n  .nav-parent:hover {\n    background-color: #ffa773;\n    color: #fff;\n    cursor: pointer; }\n\n.nav-child {\n  margin-bottom: 20px;\n  border-bottom: 4px solid #6C6C6C;\n  border-top: 4px solid #6C6C6C; }\n  .nav-child a {\n    color: #ffa773; }\n    .nav-child a:active, .nav-child a:focus, .nav-child a:hover {\n      color: #ffa773; }\n  .nav-child li {\n    transition: 0.3s all;\n    /* margin-bottom: 10px; */\n    /* background-color: #fff; */\n    /* border-radius: 3px; */ }\n    .nav-child li.active:hover {\n      color: #ffa773; }\n    .nav-child li:hover {\n      background-color: #ffa773;\n      color: #fff;\n      text-indent: 10px;\n      cursor: pointer; }\n    .nav-child li.active {\n      border-left: 5px solid #ffa773;\n      background-color: #494949; }\n\n.desc-container {\n  position: absolute;\n  bottom: 0;\n  width: 100%;\n  background-color: #4a4a4a;\n  padding: 30px 0; }\n\n.desc {\n  color: #818181;\n  font-size: 14px;\n  text-align: center;\n  font-weight: 500; }\n\n.content {\n  width: 1200px;\n  color: #666;\n  display: none; }\n  .content h1 {\n    color: #ffa773;\n    margin: 46px 0 20px 0;\n    font-size: 35px; }\n  .content h4 {\n    font-weight: 500;\n    margin: 10px 0;\n    font-size: 30px; }\n  .content p {\n    font-size: 16px;\n    text-indent: 2em;\n    line-height: 30px;\n    margin-bottom: 5px; }\n  .content .block {\n    border-left: 4px solid #ddd;\n    padding: 0 15px;\n    color: #777;\n    text-indent: 0;\n    margin-left: 2em; }\n  .content.active {\n    display: block; }\n\n.card-container {\n  display: -webkit-flex;\n  -webkit-flex-flow: row;\n  margin-bottom: 50px; }\n\n.card {\n  width: 180px;\n  min-height: 0;\n  max-width: 100%;\n  background: #FFF;\n  margin-right: 100px;\n  padding: 0;\n  border: none;\n  border-radius: .28571429rem;\n  box-shadow: 0 1px 3px 0 #D4D4D5,0 0 0 1px #D4D4D5; }\n  .card img {\n    width: 180px; }\n  .card .avatar {\n    display: inline-block;\n    width: 180px;\n    height: 180px;\n    background-repeat: no-repeat;\n    background-size: cover; }\n\n.card-content {\n  padding: 5px 10px; }\n  .card-content .name {\n    font-size: 14px;\n    font-weight: 500;\n    display: block;\n    text-align: right; }\n\n.research-container {\n  border: 1px solid #E5E5E5;\n  border-radius: 4px;\n  padding: 30px;\n  margin-bottom: 30px; }\n  .research-container ol {\n    padding-left: 20px; }\n  .research-container .title {\n    text-indent: 0;\n    font-size: 35px;\n    font-weight: 600;\n    margin-bottom: 20px; }\n    .research-container .title a {\n      color: #666; }\n      .research-container .title a:active, .research-container .title a:focus, .research-container .title a:hover {\n        color: #666; }\n  .research-container .author {\n    font-size: 20px;\n    text-indent: 0; }\n  .research-container .screenshot img {\n    width: 100%; }\n", ""]);
 
 	// exports
 
@@ -401,6 +408,104 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Controller = (function () {
+	    function Controller() {
+	        var _this = this;
+
+	        _classCallCheck(this, Controller);
+
+	        this._router = {
+	            intro: function intro() {
+	                _this.unsetActiveNav();
+	                _this.unsetActiveTab();
+	                $('.nav').find('li').eq(0).addClass('active');
+	                $('.content').eq(0).addClass('active');
+	            },
+	            people: function people() {
+	                _this.unsetActiveNav();
+	                _this.unsetActiveTab();
+	                $('.nav').find('li').eq(1).addClass('active');
+	                $('.content').eq(1).addClass('active');
+	            },
+	            // paper: () => {
+	            //     this.unsetActiveNav();
+	            //     this.unsetActiveTab();
+	            //     $('.nav').find('li').eq(2).addClass('active');
+	            //     $('.content').eq(2).addClass('active');
+	            // },
+	            research: function research() {
+	                _this.unsetActiveNav();
+	                _this.unsetActiveTab();
+	                $('.nav').find('li').eq(2).addClass('active');
+	                $('.content').eq(2).addClass('active');
+	            }
+	        };
+
+	        this.bindEvents();
+	        this.route();
+	    }
+
+	    /**
+	     * 路由
+	     *
+	     */
+
+	    _createClass(Controller, [{
+	        key: 'unsetActiveNav',
+	        // about: () => {
+	        //     this.unsetActiveNav();
+	        //     this.unsetActiveTab();
+	        //     $('.nav').find('li').eq(3).addClass('active');
+	        //     $('.content').eq(3).addClass('active');
+	        // },
+	        value: function unsetActiveNav() {
+	            $('.nav').find('li').removeClass('active');
+	        }
+	    }, {
+	        key: 'unsetActiveTab',
+	        value: function unsetActiveTab() {
+	            $('.content').removeClass('active');
+	        }
+	    }, {
+	        key: 'getHash',
+	        value: function getHash() {
+	            return window.location.hash.slice(1) || 'intro';
+	        }
+	    }, {
+	        key: 'bindEvents',
+	        value: function bindEvents() {
+	            $(window).on('hashchange', this.route.bind(this));
+	        }
+	    }, {
+	        key: 'route',
+	        value: function route(e) {
+	            var hash = this.getHash();
+
+	            if (this._router[hash] && typeof this._router[hash] === 'function') {
+	                this._router[hash]();
+	            }
+	        }
+	    }]);
+
+	    return Controller;
+	})();
+
+	exports.default = Controller;
 
 /***/ }
 /******/ ]);
