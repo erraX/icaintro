@@ -33,6 +33,12 @@ export default class Controller {
             $('.nav').find('li').eq(2).addClass('active');
             $('.content').eq(2).addClass('active');
         },
+        hot: () => {
+            this.unsetActiveNav();
+            this.unsetActiveTab();
+            $('.nav').find('li').eq(3).addClass('active');
+            $('.content').eq(3).addClass('active');
+        },
         // about: () => {
         //     this.unsetActiveNav();
         //     this.unsetActiveTab();
